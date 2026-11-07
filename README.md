@@ -2,6 +2,8 @@
 
 Bronze-silver-gold pipeline on NYC Yellow Taxi data for January 2024 (2.96M rows), built in Databricks Free Edition with SQL and run as a Databricks Job.
 
+Data source: NYC TLC Trip Record Data (Yellow Taxi, January 2024).
+
 ## Layers
 - **Bronze** (`workspace.nyc_taxi.bronze_trips`): raw Parquet file loaded from a Unity Catalog volume, no changes.
 - **Silver** (`silver_trips`): removed exact duplicate rows, rows missing pickup time or fare, fares at or below zero, and pickups outside January 2024.
